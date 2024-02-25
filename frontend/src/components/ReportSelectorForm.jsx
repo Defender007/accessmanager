@@ -31,8 +31,11 @@ export default function ReportSelectorForm(props) {
     });
   };
 
+  const {admin } = props
+
   return (
-    <Card>
+    admin && (
+      <Card>
       <Card.Body>
         <Card.Text>Report Selector</Card.Text>
 
@@ -67,7 +70,7 @@ export default function ReportSelectorForm(props) {
           </Form.Group>
 
           <Button
-            variant="primary"
+            variant="warning"
             type="submit"
             style={{
               width: "100%",
@@ -78,5 +81,6 @@ export default function ReportSelectorForm(props) {
         </Form>
       </Card.Body>
     </Card>
+    )
   );
 }
